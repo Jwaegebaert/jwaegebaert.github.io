@@ -1,8 +1,8 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Jasey Waegebaert Blog",
+    "title": "JW Blog",
     "home_page_url": "https://jwaegebaert.github.io/",
-    "description": "Jasey Waegebaert Blog",
+    "description": "Blog articles that are posted on JW",
     "items": [
         {
             "id": "style-command-bar-with-formatting-magic",

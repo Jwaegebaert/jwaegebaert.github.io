@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Jasey Waegebaert Blog</title>
+        <title>JW Blog</title>
         <link>https://jwaegebaert.github.io/</link>
-        <description>Jasey Waegebaert Blog</description>
+        <description>Blog articles that are posted on JW</description>
         <lastBuildDate>Sun, 01 May 2022 10:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
