@@ -1,0 +1,1 @@
+cmd /C 'set "GIT_USER=jwaegebaert" && set "DEPLOYMENT_BRANCH=gh-pages" && yarn deploy'
