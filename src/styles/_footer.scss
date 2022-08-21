@@ -1,0 +1,43 @@
+.footerContainer {
+  padding: 32px 16px;
+  width: 100%;
+
+  .links, .text {
+    display: block;
+    margin-bottom: inherit;
+  }
+
+  .links {
+    height: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+
+    a {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+
+      &:not(:first-of-type) {
+        margin-left: 15px;
+      }
+    }
+
+    svg {
+      height: 25px;
+      fill: var(--ifm-color-content);
+      transition: fill .2s ease-out;
+
+      &:hover {
+        fill: var(--ifm-color-primary);
+      }
+    }
+  }
+
+  .text {
+    text-align: center;
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
