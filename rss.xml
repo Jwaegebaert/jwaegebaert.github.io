@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>JW Blog</title>
+        <title>JW blog</title>
         <link>https://jwaegebaert.github.io/</link>
         <description>Blog articles that are posted on JW</description>
         <lastBuildDate>Sun, 01 May 2022 10:00:00 GMT</lastBuildDate>
