@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjwaegebaert=self.webpackChunkjwaegebaert||[]).push([[713],{3457:e=>{e.exports=JSON.parse('[{"label":"SharePoint","permalink":"/blog/tags/share-point","count":1},{"label":"List formatting","permalink":"/blog/tags/list-formatting","count":1}]')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjwaegebaert=self.webpackChunkjwaegebaert||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Style your command bar with formatting magic","permalink":"/style-command-bar-with-formatting-magic"}]}')}}]);

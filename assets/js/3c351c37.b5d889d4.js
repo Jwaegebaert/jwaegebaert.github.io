@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjwaegebaert=self.webpackChunkjwaegebaert||[]).push([[291],{5938:a=>{a.exports=JSON.parse('{"label":"List formatting","permalink":"/blog/tags/list-formatting","allTagsPath":"/blog/tags","count":1}')}}]);
