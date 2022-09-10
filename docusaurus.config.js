@@ -6,7 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Jasey Waegebaert',
+  title: 'JW',
+  titleDelimiter: '-',
   tagline: 'Blog',
   url: 'https://jwaegebaert.github.io',
   baseUrl: '/',
@@ -28,7 +29,32 @@ const config = {
     locales: ['en'],
   },
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-Y3K6NBX58L',
+        anonymizeIP: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          console.log(existingPath);
+          if (existingPath.includes('/community')) {
+            // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
+            return [
+              existingPath.replace('/community', '/docs/team'),
+              existingPath.replace('/community', '/docs/support'),
+            ];
+          }
+          return undefined; // Return a falsy value: no redirect created
+        },
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -37,11 +63,14 @@ const config = {
       ({
         docs: false,
         blog: {
+          blogTitle: 'Blog',
           showReadingTime: true,
-          routeBasePath: '/', 
           feedOptions: {
             type: 'all',
-            copyright: `© ${new Date().getFullYear()} <b>Jasey Waegebaert</b>`
+            title: 'JW blog',
+            description: 'Blog articles that are posted on JW',
+            copyright: `© ${new Date().getFullYear()} <b>Jasey Waegebaert</b>`,
+            language: 'en'
           }
         },
         theme: {
@@ -69,7 +98,8 @@ const config = {
           style: { padding: '4px' }
         },
         items: [
-          { to: '/', label: 'Blog', position: 'left' },
+          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/about-me', label: 'About me', position: 'left' },
           {
             href: 'https://github.com/jwaegebaert',
             label: 'GitHub',

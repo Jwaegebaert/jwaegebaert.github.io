@@ -19,7 +19,6 @@ export default function BlogPostItem({children, className}) {
   return (
     <BlogPostItemContainer className={clsx(containerClassName, className)}>
       <BlogPostItemHeader />
-      { children.type.frontMatter.image && <p>Demo</p>}
       <BlogPostItemContent>{children}</BlogPostItemContent>
       <BlogPostItemFooter />
     </BlogPostItemContainer>

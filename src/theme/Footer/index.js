@@ -21,7 +21,7 @@ function Footer() {
           <LinkedInLogo/>
         </a>
 
-        <a href='https://jwaegebaert.github.com/rss.xml' target='_blank' rel='noreferrer'>
+        <a href='https://jwaegebaert.github.io/rss.xml' target='_blank' rel='noreferrer'>
           <RSSLogo/>
         </a>
       </div>

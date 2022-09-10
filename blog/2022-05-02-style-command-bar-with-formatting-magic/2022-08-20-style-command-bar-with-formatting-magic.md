@@ -1,6 +1,7 @@
 ---
 slug: style-command-bar-with-formatting-magic
 title: Style your command bar with formatting magic
+description: SharePoint changing the command bar with view formatting
 date: 2022-05-01T10:00
 authors: jwaegebaert
 image: ./preview.png

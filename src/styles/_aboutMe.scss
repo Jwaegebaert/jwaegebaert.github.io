@@ -1,0 +1,217 @@
+$height365: -1vw;
+ 
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url('@site/static/img/aboutMe/aboutMeBanner.png');
+  box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  h1 {
+    font-size: 5vw;
+    width: 100%;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    animation: byBottom 1s ease both;
+    font-weight: 600;
+    letter-spacing: 0.25vw;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 2em;
+    animation: byBottom 1s 0.25s ease both;
+
+    .span365 {
+      display: inline;
+      position: relative;
+    
+      span {
+        z-index: 5;
+  
+        &:first-of-type {
+          animation: firstColor 1s 1.5s ease both;
+        }
+
+        &:not(:first-of-type) {
+          position: absolute;
+          left: 0;
+        }
+  
+        &:nth-of-type(2) {
+          animation: secondColor 1s 1.5s ease both;
+        }
+  
+        &:nth-of-type(3) {
+          animation: thirdColor 1s 1.5s ease both;
+        }
+  
+        &:nth-of-type(4) {
+          animation: fourthColor 1s 1.5s ease both;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding: 50px var(--ifm-spacing-horizontal);
+  max-width: var(--ifm-container-width-xl);
+  margin: 0 auto;
+
+  .flexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+    .imageBox {
+      min-width: 250px;
+      height: 250px;
+      position: relative;
+
+      img {
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+
+      p {
+        position: absolute;
+        bottom: -40px;
+        right: -150px;
+        background-color: var(--ifm-color-primary);
+        color: var(--fim-color-primary-text);
+        width: 270px;
+        height: 80px;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 0;
+        font-size: 18px;
+      }
+    }
+
+    .intro {
+      width: 40%;
+      text-align: justify;
+
+      b {
+        font-weight: 400;
+        background-color: var(--ifm-color-primary);
+        color: var(--fim-color-primary-text);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+
+    p {
+      font-size: 1em;
+    }
+  }
+
+  .content {
+    .flexBox {
+      flex-direction: column !important;
+    }
+
+    .imageBox {
+      min-width: 200px !important;
+      height: 200px !important;
+
+      img {
+        width: 200px !important;
+      }
+
+      p {
+        bottom: -40px !important;
+        width: 230px !important;
+        height: 70px !important;
+        font-size: 14px !important;
+      }
+    }
+    
+    .intro { 
+      margin-top: 60px;
+      width: 90% !important;
+    }
+  }
+
+}
+
+@keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes firstColor {
+  0% {
+    color: #fff
+  }
+  100% {
+    color: #F25022;
+  }
+}
+
+
+@keyframes secondColor {
+  0% {
+    color: #fff;
+    bottom: -7px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    bottom: $height365;
+    color: #7FBA00;
+  }
+}
+
+@keyframes thirdColor {
+  0% {
+    color: #fff;
+    bottom: -7px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    bottom: $height365 * 2;
+    color: #00A4EF;
+  }
+}
+
+@keyframes fourthColor {
+  0% {
+    color: #fff;
+    bottom: -7px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    bottom: $height365 * 3;
+    color: #FFB900;
+  }
+}
