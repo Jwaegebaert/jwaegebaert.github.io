@@ -23,21 +23,35 @@ export default function Home(): JSX.Element {
       title="About Jasey Waegebaert"
       description="About Jasey Waegebaert">
       <Header />
-      <div className={styles.content}>
+
+      <section className={styles.curved}>
+        <h1>Microsoft MVP</h1>  
+        <h2>Based in Belgium</h2>   
+      </section>
+
+      <div>          
+        <p className={styles.intro}>
+          I've always been quite passionate about technology and sports. Personally, since I started my career within the Microsoft 365 world, I have just grown more and more passionate about the possibilities provided. Primarily through the community that regularly shares their knowledge and tools with others. This has been such a help for my onboarding and continuous learning within Microsoft 365 and now I want to do the same for others. I love to share the knowledge that I have gained over the years with others. <br/><br/><b>Sharing is Caring!</b>
+        </p>
+      </div>
+      {/* <div className={styles.content}>
         <div className={styles.flexBox}>
           <div className={styles.imageBox}>
             <img src='img/aboutMe/profile.png'/>
 
-            <p>
-              Microsoft 365 Consultant, I am. Living in Belgium, I do.
-            </p>
+            <div className={styles.speechbubble}>
+              <p>
+                Microsoft 365 Consultant, I am. Living in Belgium, I do.
+              </p>
+            </div>
+
           </div>
           
           <p className={styles.intro}>
-            I am quite passionate about <b>technology</b> and <b>sports</b>. Personally, since I started my career within the Microsoft 365 world, I have just grown more and more passionate about the possibilities provided. Primarily through the community that regularly shares their knowledge and tools with others. This has been such a help for my onboarding and continuous learning within Microsoft 365 and now I want to do the same for others. I love to share the knowledge that I have gained over the years with others. <br/><br/><b>Sharing is Caring!</b>
+            I've always been quite passionate about technology and sports. Personally, since I started my career within the Microsoft 365 world, I have just grown more and more passionate about the possibilities provided. Primarily through the community that regularly shares their knowledge and tools with others. This has been such a help for my onboarding and continuous learning within Microsoft 365 and now I want to do the same for others. I love to share the knowledge that I have gained over the years with others. <br/><br/><b>Sharing is Caring!</b>
           </p>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 }
