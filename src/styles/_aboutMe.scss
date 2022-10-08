@@ -57,94 +57,85 @@
   }
 }
 
-.curved {
-  position: relative;
-  border-bottom-left-radius: 50% 34%;
-  border-bottom-right-radius: 50% 34%;
-  padding: 50px var(--ifm-spacing-horizontal);
+.skewedTop {
+  width:100%;
+  height:50px;
+  background: linear-gradient(to right bottom, var(--ifm-bg-primary) 49%, var(--ifm-bg-accent) 50%), linear-gradient(-50deg, var(--ifm-bg-primary) 16px, #000 0);
+}
+
+.skewedBottom {
+  width:100%;
+  height:50px;
+  background: linear-gradient(to right bottom, var(--ifm-bg-accent) 49%, var(--ifm-bg-primary) 50%), linear-gradient(-50deg, var(--ifm-bg-primary) 16px, #000 0);
+}
+
+.headings {
+  padding: 15px 8vw;
+  background-color: var(--ifm-bg-accent);
+  color: #fff;
 
   h1 {
-    padding-top: 10px;
+    padding: 0;
   }
 
   h2 {
-    padding-bottom: 20px;
+    margin: 0;
+  }
+ 
+  a {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    transition: box-shadow .2s ease-out;
+
+    &:hover {
+      box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);  
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
-.content {
-  padding: 50px var(--ifm-spacing-horizontal);
-  max-width: var(--ifm-container-width-xl);
-  margin: 0 auto;
+.aboutMe {
+  padding: 4rem;
 
-  .flexBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-    .imageBox {
-      min-width: 250px;
-      height: 250px;
-      position: relative;
+  strong {
+    color: var(--ifm-color-primary);
+    font-weight: 800;
+  }
 
-      img {
-        width: 250px;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-      }
+  .intro {
+    padding-inline: 4rem;
+    width: 100%;
 
-      .speechbubble {
-        width: 270px;
-        font-size: .8em;
-        line-height: 1.75;
-        padding: 15px 25px;
-        cursor: default;
-				border-left: 5px solid;
-
-        p {
-          margin-bottom: 0;
-        
-          &:before {
-            content: "“";
-            padding-top: 10px;
-            font-family: Georgia;
-            font-size: 40px;
-            line-height: 0;
-            display: inline-block;
-            display: -webkit-inline-box;
-          }
-        }
-      }
-
-      // p {
-      //   position: absolute;
-      //   bottom: -40px;
-      //   right: -150px;
-      //   background-color: var(--ifm-color-primary);
-      //   color: var(--fim-color-primary-text);
-      //   width: 270px;
-      //   height: 80px;
-      //   padding: 10px;
-      //   border-radius: 5px;
-      //   margin-bottom: 0;
-      //   font-size: 18px;
-      // }
+    img {
+      width: 300px;
+      height: 300px;
+      border: 4px solid var(--ifm-color-primary-darkest);
+      padding: 2px;
+      border-radius: 50%;
+      border-top-color: var(--ifm-color-primary);
+      border-left-color: var(--ifm-color-primary);
     }
 
-    .intro {
-      width: 40%;
+    p {
+      max-width: 30vw;
+      font-size: 18px;
       text-align: justify;
-
-      b {
-        font-weight: 400;
-        background-color: var(--ifm-color-primary);
-        color: var(--fim-color-primary-text);
-      }
     }
   }
 }
+
+
 
 @media screen and (max-width: 996px) {
   .heroBanner {
@@ -171,34 +162,47 @@
     }
   }
 
-  .content {
-    .flexBox {
-      flex-direction: column !important;
+  .skewed {
+    margin-top: -10px;
+  }
+
+  .headings {
+    h1 {
+      font-size: 1.5rem !important;
     }
 
-    .imageBox {
-      min-width: 280px !important;
-      height: 200px !important;
+    h2 {
+      font-size: 1rem !important;
+    }
+
+    a {
+      width: 75px !important;
+      height: 75px !important;
 
       img {
-        width: 200px !important;
+        width: 75px !important;
+        height: 75px !important;
       }
-
-      p {
-        right: -70px !important;
-        bottom: -40px !important;
-        width: 230px !important;
-        height: 70px !important;
-        font-size: 14px !important;
-      }
-    }
-    
-    .intro { 
-      margin-top: 60px;
-      width: 90% !important;
     }
   }
 
+  .aboutMe {
+    padding: 2rem;
+
+    .intro {
+      flex-direction: column !important;
+      padding-inline: 0 !important;
+
+      p {
+        max-width: 100%;
+      }
+
+      img {
+        margin-left: 0px !important;
+        margin-top: 40px;
+      }
+    }
+  }
 }
 
 @keyframes byBottom {
